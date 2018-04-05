@@ -153,7 +153,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="/home"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
+                            <a href="/home"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboards</a>
                         </li>
 
 @if(@Auth::user()->hasrole('teacher'))
@@ -164,7 +164,7 @@
                                     <a href="{{route('get.session')}}">Manage Marks</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('get.session.attendence')}}">Manage Attendence </a>
+                                    <a href="{{route('get.session.attendence')}}">Manage Attendance </a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
