@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Section;
-use App\Schoolclass;
+use App\SchoolClass;
 use App\Role;
 use App\User;
 use App\SessionDate;
