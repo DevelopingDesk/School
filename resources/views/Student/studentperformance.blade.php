@@ -56,9 +56,9 @@ input[type=text] {
 </div><div class="col-md-3">
 	
     <label for="lname">Percentage</label>
-   @if ($per > 50)
+   
   <input type="text" id="lname" name="lname" readonly="true" value="{{$per}}%" >
- @endif
+
 
 </div>
  
