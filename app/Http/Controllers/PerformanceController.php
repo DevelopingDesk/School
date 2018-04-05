@@ -12,8 +12,8 @@ class PerformanceController extends Controller
     private $extra=null;
     public function index(Request $request){
 $session=SessionDate::all();
-$per=null;
-return view('Student.studentperformance')->withextra($this->extra)->withsession($session)->withper($per);
+$biodata=null;
+return view('Student.studentperformance')->withextra($this->extra)->withsession($session)->withper($per)->withbio($biodata);
 
     }
     public function getResult(Request $request){

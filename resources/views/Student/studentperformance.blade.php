@@ -22,7 +22,7 @@
 	</div>
 	</form>
 </div>
-
+@if($bio!=null)
 <div class="row">
 	<div class="col-md-12">
 <br><hr>
@@ -110,7 +110,7 @@ input[type=text] {
       <!-- /#page-wrapper -->
    </div>
 </div>
-
+@endif
 
 	
 </div>
