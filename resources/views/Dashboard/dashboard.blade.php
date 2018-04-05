@@ -29,7 +29,7 @@
 <script src="{{asset('dashboard/js/rickshaw.js')}}"></script>
  <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
 
-
+<script src="{{asset('dashboard/js/Chart.js')}}"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -179,6 +179,19 @@
                                 <li>
                                     <a href="{{route('select.attendance')}}">View Attendence </a>
                                 </li>
+
+                               
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                         <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Performance<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{route('perf.student.get')}}">View Results</a>
+                                </li>
+                               
+
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>

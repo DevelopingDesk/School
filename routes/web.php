@@ -123,6 +123,10 @@ Route::get('uploaded/allstudents/get/students/attendence','ManageAttendenceContr
 
 Route::get('select/attendance/requires','ManageAttendenceController@select')->name('select.attendance');
 Route::post('post/select/attendance/requires','ManageAttendenceController@selectPost')->name('select.attendance.post');
+//performance of students
+
+Route::get('performance/of/students','PerformanceController@index')->name('perf.student.get');
+Route::post('performance/of/students/post','PerformanceController@getResult')->name('perf.student.get.result');
 
 
 
