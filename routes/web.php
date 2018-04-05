@@ -128,6 +128,8 @@ Route::post('post/select/attendance/requires','ManageAttendenceController@select
 Route::get('performance/of/students','PerformanceController@index')->name('perf.student.get');
 Route::post('performance/of/students/post','PerformanceController@getResult')->name('perf.student.get.result');
 
+Route::get('performance/of/students/peryear','PerformanceController@year')->name('perf.student.year');
+Route::post('performance/of/students/per/post','PerformanceController@genResult')->name('perf.student.gen.result');
 
 
 

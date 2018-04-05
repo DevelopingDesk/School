@@ -337,6 +337,16 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                         <li>
+                            <a href="#"><i class="fa fa-indent nav_icon"></i>Result Generate<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{route('perf.student.year')}}">Make Result</a>
+                                </li>
+                                
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                        
                        @endif
                        
