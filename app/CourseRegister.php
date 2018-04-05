@@ -13,7 +13,7 @@ class CourseRegister extends Model
 
      public function schoolClass(){
 
-        return $this->belongsTo('App\schoolClass', 'class_id');
+        return $this->belongsTo('App\SchoolClass', 'class_id');
 
 
     }
