@@ -329,10 +329,10 @@
                             <a href="#"><i class="fa fa-indent nav_icon"></i>Parents Section<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="graphs.html">Add Parent</a>
+                                    <a href="{{route('add.parent')}}">Add Parent</a>
                                 </li>
                                 <li>
-                                    <a href="typography.html">View Parents</a>
+                                    <a href="{{route('view.parent')}}">View Parents</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -347,7 +347,28 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                       
+ @elseif(@Auth::user()->hasrole('parent'))
+ <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Attendance<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{route('session.create')}}">View Attendance</a>
+                                </li>
+                               
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                         <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Marks<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{route('child.marks')}}">View Marks</a>
+                                </li>
+                               
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
                        @endif
                        
                     </ul>

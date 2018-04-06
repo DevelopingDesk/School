@@ -23,30 +23,21 @@ input[type=password] {
     
 }
 </style>
-<h1 style="text-align: center;color: green">Enter Teacher Record</h1>
+<h1 style="text-align: center;color: green">Enter Parent Record</h1>
   <div class="panel-body">
-			<form role="form" method="POST" class="form-horizontal" action="{{route('store.teacher')}}">
+			<form role="form" method="POST" class="form-horizontal" action="{{route('store.parent')}}">
 				{{csrf_field()}}
 							<div class="form-group">
-							<label class="col-md-2 control-label">Teacher Name</label>
-							<div class="col-md-8">
-								<div class="input-group input-icon right">
-									
-									<input id="name" name="studentname" class="form-control1" type="text" placeholder="teacher name">
-								</div>
-							</div>
-							
-						</div>
-						<div class="form-group">
 							<label class="col-md-2 control-label">Father Name</label>
 							<div class="col-md-8">
 								<div class="input-group input-icon right">
 									
-									<input id="fathername" class="form-control1" name="fathername" type="text" placeholder="Father name">
+									<input id="name" name="parentname" class="form-control1" type="text" placeholder="parent name">
 								</div>
 							</div>
 							
 						</div>
+						
 						<div class="form-group">
 							<label class="col-md-2 control-label">Father Cnic</label>
 							<div class="col-md-8">
@@ -57,16 +48,7 @@ input[type=password] {
 							</div>
 							
 						</div>
-						<div class="form-group">
-							<label class="col-md-2 control-label">Teacher Cnic</label>
-							<div class="col-md-8">
-								<div class="input-group input-icon right">
-									
-									<input id="teachercnic" class="form-control1" name="teachercnice" type="text" placeholder="teacher cnic">
-								</div>
-							</div>
-							
-						</div>
+						
 						<div class="form-group">
 							<label class="col-md-2 control-label">Select Religon</label>
 							<div class="col-md-8">
@@ -84,16 +66,11 @@ input[type=password] {
 
 						
 						<div class="form-group">
-							<label class="col-md-2 control-label">Account Type</label>
+							
 							<div class="col-md-8">
 								<div class="input-group input-icon right">
 									
-									<select name="acounttype" class="form-control">
-										@foreach($role as $re)
-										<option value="{{$re->id}}">{{$re->name}}</option>
-										
-										@endforeach
-									</select>
+								<input type="hidden" name="acounttype" value="4">
 								</div>
 							</div>
 							

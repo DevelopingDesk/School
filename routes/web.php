@@ -73,6 +73,20 @@ Route::get('all/enrol/teacher','TeacherController@viewAll')->name('view.teacher'
 Route::get('edit/enrol/teacher/{id}','TeacherController@getEdit')->name('get.edit.teacher');
 Route::post('post/edit/enrol/teacher','TeacherController@edit')->name('edit.teacher');
 Route::get('delete/enrol/teacher/{id}','TeacherController@delete')->name('delete.teacher');
+//parents
+Route::get('enrol/parents','ParentsController@create')->name('add.parent');
+Route::post('post/parent','ParentsController@store')->name('store.parent');
+Route::get('all/enrol/parent','ParentsController@viewAll')->name('view.parent');
+
+Route::get('edit/enrol/parent/{id}','ParentsController@getEdit')->name('get.edit.parent');
+Route::post('post/edit/enrol/parent','ParentsController@edit')->name('edit.parent');
+
+Route::get('delete/enrol/parent/{id}','ParentsController@delete')->name('delete.parent');
+
+Route::get('see/your/parent/marks','ParentsController@getMarks')->name('child.marks');
+Route::post('post/your/parent/marks','ParentsController@postMarks')->name('post.child.marks');
+
+
 
 //fee 
 Route::get('all/classes/get/fee','FeeController@index')->name('view.classes');
