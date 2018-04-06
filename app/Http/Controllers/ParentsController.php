@@ -38,8 +38,10 @@ $user=new User();
         $user->user_type=$data['acounttype'];
 $classid=Schoolclass::first();
 $session=SessionDate::first();
+$section=Section::first();
 $user->class_id=$classid->id;
 $user->session_id=$session->id;
+$user->section_id=$section->id;
             $user->save();
 
              
