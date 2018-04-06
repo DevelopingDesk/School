@@ -1,5 +1,27 @@
 @extends('Dashboard/dashboard')
 @section('content')
+
+<style type="text/css">
+	
+	input[type=text] {
+   
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid lightgreen;
+    
+}
+input[type=password] {
+   
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    
+}
+</style>
 <h1 style="text-align: center;color: green">Update Student Record</h1>
   <div class="panel-body">
 			<form role="form" method="POST" class="form-horizontal" action="{{route('edit.student')}}">

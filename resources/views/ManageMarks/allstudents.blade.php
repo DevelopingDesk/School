@@ -1,6 +1,17 @@
 @extends('Dashboard/dashboard')
 
 @section('content')
+<style> 
+input[type=number] {
+   
+    padding: 12px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid lightblue;
+    
+}
+</style>
 <button onclick="myFunction()" class="btn btn-danger">More Filters</button>
 <div id="myDIV" style="display: none">
   
@@ -134,9 +145,9 @@
                 <td>{{$students->UserDetail->name}} <input type="hidden" name="studentid[]" value="{{$students->UserDetail->id}}"></td>
                 <td>{{$students->UserDetail->father_name}}</td>
                 <td>{{$students->schoolClass->name}} <input type="hidden" name="classid[]" value="{{$students->schoolClass->id}}"></td>
-                <th>{{$students->session->name}} <input type="hidden" name="sessionid[]" value="{{$students->session->id}}"></th>
+                <td>{{$students->session->name}} <input type="hidden" name="sessionid[]" value="{{$students->session->id}}"></td>
                
-               <th><input type="number" name="obtainedmarks[]" value="{{$students->marks}}" class="form-control" placeholder="Enter marks here"></th>
+               <td><input type="number" name="obtainedmarks[]" value="{{$students->marks}}"  placeholder="Enter marks here"></td>
 
             
                

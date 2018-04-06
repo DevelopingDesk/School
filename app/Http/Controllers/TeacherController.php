@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Section;
+use App\SessionDate;
 use App\SchoolClass;
 use App\Role;
 use App\User;
@@ -31,7 +32,10 @@ $user=new User();
             
             $user->password =bcrypt($data['password']);
         $user->user_type=$data['acounttype'];
-
+$classid=Schoolclass::first();
+$session=SessionDate::first();
+$user->class_id=$classid->id;
+$user->session_id=$session->id;
             $user->save();
 
              
