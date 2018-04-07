@@ -7,6 +7,7 @@ use App\Section;
 use App\SessionDate;
 use App\SchoolClass;
 use App\ExamRecord;
+use App\StudentAttendence;
 use App\Exams;
 
 use App\Role;
@@ -133,6 +134,36 @@ $marks=ExamRecord::where('student_id','=',$request->childid)
 ->where('exam_id','=',$request->examid)->get();
 //dd($marks);
 return view('Parents.viewmarks')->withextra($this->extra)->withchilds($childs)->withclasses($classes)->withexam($exam)->withmarks($marks);
+
+}
+
+public function getattendance(Request $request){
+$user=Auth::User();
+$childs=User::where('father_cnic','=',$user->father_cnic)
+->where('user_type','=',3)
+->get();
+$classes=SchoolClass::all();
+
+$marks=null;
+return view('Parents.viewattendance')->withextra($this->extra)->withchilds($childs)->withclasses($classes)->withattendance($marks);
+
+}
+
+
+public function postAttendance(Request $request){
+
+    $user=Auth::User();
+$childs=User::where('father_cnic','=',$user->father_cnic)
+->where('user_type','=',3)
+->get();
+$classes=SchoolClass::all();
+$atten=StudentAttendence::where('student_id','=',$request->childid)
+->where('class_id','=',$request->classid)
+->where('date','=',$request->datepicker)->get();
+//dd($request->childid);
+return view('Parents.viewattendance')->withextra($this->extra)->withchilds($childs)->withclasses($classes)->withattendance($atten);
+
+
 
 }
 

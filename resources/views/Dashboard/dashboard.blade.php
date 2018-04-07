@@ -352,7 +352,7 @@
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>Attendance<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{route('session.create')}}">View Attendance</a>
+                                    <a href="{{route('child.attendence')}}">View Attendance</a>
                                 </li>
                                
                             </ul>

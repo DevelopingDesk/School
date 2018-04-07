@@ -86,6 +86,8 @@ Route::get('delete/enrol/parent/{id}','ParentsController@delete')->name('delete.
 Route::get('see/your/parent/marks','ParentsController@getMarks')->name('child.marks');
 Route::post('post/your/parent/marks','ParentsController@postMarks')->name('post.child.marks');
 
+Route::get('see/your/parent/attendence','ParentsController@getAttendance')->name('child.attendence');
+Route::post('see/your/parent/attendence','ParentsController@postAttendance')->name('child.attendence');
 
 
 //fee 
