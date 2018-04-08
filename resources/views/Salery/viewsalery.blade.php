@@ -10,7 +10,7 @@
         
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" style="text-align: center">Edit Subject</h4>
+        <h4 class="modal-title" style="text-align: center">Edit Salery</h4>
       </div>
       <div class="modal-body" width="30px" >
        <textarea id="body" name="body" class="form-control" placeholder="your report must be solid"></textarea>
@@ -91,12 +91,12 @@
 
 
 </script>
-<script type="text/javascript" src="{{asset('js/Salary/update.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/Salery/update.js')}}"></script>
 <script type="text/javascript">
 var token='{{Session::token()}}';
 var add='{{route('update.salery')}}';
 
-</script>
+</script> 
 
 
 
