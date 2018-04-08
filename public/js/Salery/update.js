@@ -5,15 +5,15 @@ var mn=null;
 $(".edit").click(function (event) {
 
 	
-     name = $(this).closest("tr").find("td:eq(2)").text();
-     mn = $(this).closest("tr").find("td:eq(2)");
+     name = $(this).closest("tr").find("td:eq(1)").text();
+     mn = $(this).closest("tr").find("td:eq(1)");
 
      id = $(this).closest("tr").find("td:eq(0)").text();
 
     $('#myModal').modal();
 
 $('#body').html(name);
-$('#idsection').html(id);
+$('#idclass').html(id);
 
 
 
@@ -23,8 +23,10 @@ $('#idsection').html(id);
 });
 
 $('#save').on('click',function(){
+
+
 var body=$('#body').val();
-  
+ 
 mn.text(body);
 
 $.ajax({
@@ -33,7 +35,7 @@ url:add,
 
 data:{id:id,name:body,_token:token},
 success:function(data){
-console.log(data);
+//console.log(data);
 $('#myModal').modal('hide');
 
 

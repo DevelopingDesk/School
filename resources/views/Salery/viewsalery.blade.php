@@ -91,7 +91,7 @@
 
 
 </script>
-<script type="text/javascript" src="{{asset('js/Subject/update.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/Salery/update.js')}}"></script>
 <script type="text/javascript">
 var token='{{Session::token()}}';
 var add='{{route('update.salery')}}';
