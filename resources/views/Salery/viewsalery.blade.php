@@ -1,18 +1,16 @@
 @extends('Dashboard/dashboard')
 @section('content')
 
-
-
 <div id="myModal" style="margin-top:30px"  class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
-      <form role="form" id="myform" action="{{route('update.salery')}}">
+      <form role="form" id="myform" action="{{route('edit.schoolclass')}}">
         
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" style="text-align: center">Edit Salery</h4>
+        <h4 class="modal-title" style="text-align: center">Edit Subject</h4>
       </div>
       <div class="modal-body" width="30px" >
        <textarea id="body" name="body" class="form-control" placeholder="your report must be solid"></textarea>
@@ -75,7 +73,7 @@
 
 
 
-                 <td><a href="#"  class="btn btn-xs btn-primary edit"><i class="glyphicon glyphicon-edit "></i> Edit</a>
+                 <td>  <a  href="#" id="edit"  class="edit btn btn-xs btn-primary edit" data-toggle="modal"><i class="glyphicon glyphicon-edit" data-target="#myModal"></i> Edit </a>
                 <a href="{{route('delete.salery',$students->id)}}" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i> Delete</a>
                 
            </td>
