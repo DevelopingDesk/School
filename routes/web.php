@@ -147,6 +147,11 @@ Route::post('performance/of/students/post','PerformanceController@getResult')->n
 Route::get('performance/of/students/peryear','PerformanceController@year')->name('perf.student.year');
 Route::post('performance/of/students/per/post','PerformanceController@genResult')->name('perf.student.gen.result');
 
-
+//salery
+Route::get('salery/get','SaleryController@index')->name('get.salery');
+Route::post('salery/post','SaleryController@postSalery')->name('post.salery');
+Route::get('view/salery/all','SaleryController@viewSalery')->name('view.salery');
+Route::post('update/salery/all','SaleryController@updateSalery')->name('update.salery');
+Route::get('delete/salery/{id}','SaleryController@delete')->name('delete.salery');
 
 

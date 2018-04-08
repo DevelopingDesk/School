@@ -278,16 +278,17 @@
                             <!-- /.nav-second-level -->
                         </li>
                          <li>
-                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Attendence<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Salery Manage<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="grids.html">Teacher Attendence</a>
+                                    <a href="{{route('get.salery')}}">Teachers Salery</a>
                                 </li>
                                 <li>
-                                    <a href="grids.html">Student Attendence</a>
+                                    <a href="{{route('view.salery')}}">View Salery</a>
                                 </li>
+                                
                             </ul>
-                            <!-- /.nav-second-level -->
+                          
                         </li>
                          <li>
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>Reports<span class="fa arrow"></span></a>

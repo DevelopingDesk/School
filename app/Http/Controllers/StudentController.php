@@ -46,12 +46,15 @@ return view('Student.promote')->withextra($this->extra)->withsection($section)->
 }
 
 public function searchPromote(Request $request){
+
 $section=Section::all();
 $schoolclass=Schoolclass::all();
 $session=SessionDate::all();
 $students=User::where('class_id','=',$request['classid'])
 ->where('section_id','=',$request['sectionid'])
-->where('session_id','=',$request['sessionid'])->get();
+->where('session_id','=',$request['sessionid'])
+->where('user_type','=',3)
+->get();
 
 return view('Student.promote')->withsection($section)->withsession($session)->withschoolclass($schoolclass)->withstudent($students)->withextra($this->extra);
 
