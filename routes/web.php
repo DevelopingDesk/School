@@ -154,4 +154,7 @@ Route::get('view/salery/all','SaleryController@viewSalery')->name('view.salery')
 Route::post('update/salery/all','SaleryController@updateSalery')->name('update.salery');
 Route::get('delete/salery/{id}','SaleryController@delete')->name('delete.salery');
 
+//result reports
+Route::get('get/result/reports','ReportController@index')->name('get.report');
+Route::post('get/result/reports','ReportController@postResult')->name('post.report');
 

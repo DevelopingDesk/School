@@ -294,10 +294,10 @@
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>Reports<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="grids.html">Graphical Reports</a>
+                                    <a href="{{route('get.report')}}">Result Reports</a>
                                 </li>
                                 <li>
-                                    <a href="grids.html">Manual Reports</a>
+                                    <a href="">Profit Loss Report</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
